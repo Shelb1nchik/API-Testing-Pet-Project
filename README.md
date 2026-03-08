@@ -27,3 +27,8 @@ bug_reports/ - примеры баг-репортов
 
 Чек-лист, тест-кейсы и тестовый набор можно посмотреть здесь:
 https://clck.ru/3SQjJn
+
+## Test report (Allure)
+
+
+![Allure Report](screenshots/Report.png)
