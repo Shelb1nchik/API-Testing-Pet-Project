@@ -1,5 +1,5 @@
 import requests
-from data.booking_data import payload, update_payload, patch_payload
+from train_data.booking_data import payload, update_payload, patch_payload
 
 BASE_URL = "https://restful-booker.herokuapp.com"
 

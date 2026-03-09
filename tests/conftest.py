@@ -1,9 +1,17 @@
 import pytest
 import requests
+from selenium import webdriver
 
 BASE_URL = "https://restful-booker.herokuapp.com"
 
+@pytest.fixture
+def driver():
+    driver = webdriver.Chrome()
+    driver.maximize_window()
 
+    yield driver
+
+    driver.quit()
 @pytest.fixture
 def token():
     response = requests.post(
