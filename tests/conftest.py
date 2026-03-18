@@ -1,12 +1,20 @@
 import pytest
+import os
 import requests
 from selenium import webdriver
 
 BASE_URL = "https://restful-booker.herokuapp.com"
 
+chromeOptions = webdriver.ChromeOptions()
+# chromeOptions.add_argument("--headless")
+prefs = {
+    "download.default_directory": f"{os.getcwd()}/downloads"
+}
+chromeOptions.add_experimental_option("prefs", prefs)
+
 @pytest.fixture
 def driver():
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=chromeOptions)
     driver.maximize_window()
 
     yield driver
